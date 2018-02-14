@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Hazdryx.Tokenize</PackageId>
+    <Authors>Christopher Bishop</Authors>
+    <Company>Hazdryx</Company>
+    <NeutralLanguage />
+    <RepositoryUrl>https://github.com/hazdryx/Tokenize</RepositoryUrl>
+    <Description>A .NET library providing tools for lexical analysis and parsing.</Description>
+    <Copyright>Copyright (c) 2018 Christopher Bishop</Copyright>
+    <PackageLicenseUrl>https://github.com/hazdryx/Tokenize/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
