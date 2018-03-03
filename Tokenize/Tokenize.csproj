@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Tokenize</PackageId>
-    <Title>Tokenize</Title>
+    <Version>1.0.0</Version>
     <Authors>Christopher Bishop</Authors>
     <Company>Hazdryx</Company>
     <NeutralLanguage>English</NeutralLanguage>
@@ -13,7 +13,7 @@
     <PackageLicenseUrl>https://github.com/hazdryx/Tokenize/blob/master/LICENSE</PackageLicenseUrl>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageTags>Tokenize</PackageTags>
+    <PackageTags>Tokenize, Token, Lexeme, Lexical Analysis, Finite State Automata, Parsing</PackageTags>
     <RepositoryType></RepositoryType>
   </PropertyGroup>
 
