@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Hazdryx.Tokenize</PackageId>
+    <PackageId>Tokenize</PackageId>
     <Title>Tokenize</Title>
     <Authors>Christopher Bishop</Authors>
     <Company>Hazdryx</Company>
@@ -12,8 +12,9 @@
     <Copyright>Copyright (c) 2018 Christopher Bishop</Copyright>
     <PackageLicenseUrl>https://github.com/hazdryx/Tokenize/blob/master/LICENSE</PackageLicenseUrl>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>Tokenize</PackageTags>
+    <RepositoryType></RepositoryType>
   </PropertyGroup>
 
 </Project>
