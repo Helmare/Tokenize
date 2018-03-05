@@ -13,15 +13,16 @@ namespace Tokenize.StateMachine
         /// <summary>
         ///     Gets a list of states.
         /// </summary>
-        public List<State<T>> States { get; } = new List<State<T>>();
+        private List<State<T>> States { get; } = new List<State<T>>();
 
         /// <summary>
-        ///     Adds a state to the machine.
+        ///     Gets a state at a specific index.
         /// </summary>
-        /// <param name="state">The state to be added.</param>
-        public void AddState(State<T> state)
+        /// <param name="index">The index.</param>
+        /// <returns></returns>
+        public State<T> this[int index]
         {
-            States.Add(state);
+            get { return States[index]; }
         }
 
         /// <summary>
@@ -30,8 +31,8 @@ namespace Tokenize.StateMachine
         /// <returns>The state created.</returns>
         public State<T> AddState()
         {
-            State<T> state = new State<T>();
-            AddState(state);
+            State<T> state = new State<T>(States.Count);
+            States.Add(state);
             return state;
         }
 

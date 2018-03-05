@@ -10,10 +10,21 @@ namespace Tokenize.StateMachine
     /// <typeparam name="T">The type of stream that this class will be used for.</typeparam>
     public class State<T>
     {
+
+        /// <summary>
+        ///     The index associated with the FiniteStateMachine.
+        /// </summary>
+        public int Index { get; }
         /// <summary>
         ///     Gets a list of transitions.
         /// </summary>
         public List<StateTransition<T>> Transitions { get; } = new List<StateTransition<T>>();
+
+
+        internal State(int index)
+        {
+            this.Index = index;
+        }
 
         /// <summary>
         ///     Add a transition to the list.
