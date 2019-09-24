@@ -34,7 +34,7 @@ namespace Tokenize.StateMachine
         }
 
         /// <summary>
-        ///     Runs the machine.
+        ///     Evaluates the stream by running it through the state machine.
         /// </summary>
         /// <param name="stream">The stream to itterate over.</param>
         /// <param name="callActions">
@@ -43,7 +43,7 @@ namespace Tokenize.StateMachine
         ///     valid.
         /// </param>
         /// <returns>The state the machine finished on.</returns>
-        public int Run(IEnumerable<T> stream, bool callActions)
+        public int Evaluate(IEnumerable<T> stream, bool callActions)
         {
             int state = 0;
             int pos = 1;
