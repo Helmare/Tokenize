@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Tokenize.StateMachine
 {
@@ -56,9 +53,9 @@ namespace Tokenize.StateMachine
                 int nextState = -1;
                 foreach (StateTransition<T> transition in States[state].Transitions)
                 {
-                    if (transition.Validator(bit))
+                    if (transition.IsValidBit(bit))
                     {
-                        transition.Action?.Invoke(bit);
+                        if(callActions) transition.Action?.Invoke(bit);
                         nextState = transition.NextState;
                         break;
                     }

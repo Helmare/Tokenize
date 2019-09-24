@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Tokenize.StateMachine
+﻿namespace Tokenize.StateMachine
 {
     /// <summary>
     ///     A structure with infoirmation about a state transition.
@@ -17,7 +13,7 @@ namespace Tokenize.StateMachine
         /// <summary>
         ///     Gets the BitValidator for this transition.
         /// </summary>
-        public BitValidator<T> Validator { get; }
+        public BitValidator<T> IsValidBit { get; }
         /// <summary>
         ///     Gets the StateAction for this transition.
         /// </summary>
@@ -27,7 +23,7 @@ namespace Tokenize.StateMachine
         public StateTransition(int nextState, BitValidator<T> validator, StateAction<T> action)
         {
             this.NextState = nextState;
-            this.Validator = validator;
+            this.IsValidBit = validator;
             this.Action = action;
         }
 
@@ -40,7 +36,7 @@ namespace Tokenize.StateMachine
         public StateTransition(int nextState, T validBit, StateAction<T> action)
         {
             this.NextState = nextState;
-            this.Validator = (bit) => bit.Equals(validBit);
+            this.IsValidBit = (bit) => bit.Equals(validBit);
             this.Action = action;
         }
     }
