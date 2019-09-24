@@ -26,19 +26,6 @@
             this.IsValidBit = validator;
             this.Action = action;
         }
-
-        /// <summary>
-        ///     A state transition which is only valid when the bit
-        ///     is equal to the <code>validBit</code>.
-        /// </summary>
-        /// <param name="validBit"></param>
-        /// <param name="action"></param>
-        public StateTransition(int nextState, T validBit, StateAction<T> action)
-        {
-            this.NextState = nextState;
-            this.IsValidBit = (bit) => bit.Equals(validBit);
-            this.Action = action;
-        }
     }
 
     /// <summary>

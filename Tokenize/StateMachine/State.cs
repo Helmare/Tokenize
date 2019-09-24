@@ -54,7 +54,7 @@ namespace Tokenize.StateMachine
         /// <param name="action">The action to perform when the transition is valid.</param>
         public State<T> AddTransition(int nextState, T validBit, StateAction<T> action)
         {
-            return AddTransition(new StateTransition<T>(nextState, validBit, action));
+            return AddTransition(new StateTransition<T>(nextState, (bit) => bit.Equals(validBit), action));
         }
         /// <summary>
         ///     Adds a transition to the list.
