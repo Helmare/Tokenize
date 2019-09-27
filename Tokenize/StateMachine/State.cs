@@ -13,6 +13,10 @@ namespace Tokenize.StateMachine
         /// </summary>
         public int Index { get; }
         /// <summary>
+        ///     Gets or sets whether this state is a valid ending state.
+        /// </summary>
+        public bool IsValid { get; set; }
+        /// <summary>
         ///     Gets a list of transitions.
         /// </summary>
         public List<StateTransition<T>> Transitions { get; } = new List<StateTransition<T>>();

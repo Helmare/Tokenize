@@ -42,8 +42,8 @@ namespace Tokenize.StateMachine
         ///     This is usefull for testing whether a stream is
         ///     valid.
         /// </param>
-        /// <returns>The state the machine finished on.</returns>
-        public int Evaluate(IEnumerable<T> stream, bool callActions)
+        /// <returns>The result of the evaluation.</returns>
+        public MachineResult Evaluate(IEnumerable<T> stream, bool callActions)
         {
             int state = 0;
             int pos = 1;
@@ -64,14 +64,22 @@ namespace Tokenize.StateMachine
                 // Throw error if no transition is found.
                 if (nextState == -1)
                 {
-                    throw new StateMachineException<T>(bit, pos, state);
+                    return MachineResult.Failed(state, "Unexpected " + typeof(T).Name + " \"" + bit.ToString() + "\" at state " + state + ", position " + pos + ".");
                 }
 
                 // Update info.
                 state = nextState;
                 pos++;
             }
-            return state;
+
+            if(States[state].IsValid)
+            {
+                return MachineResult.Success(state);
+            }
+            else
+            {
+                return MachineResult.Failed(state, "Unexpected ending state.");
+            }
         }
     }
 }
